@@ -1,0 +1,40 @@
+h1 {
+  text-align: center;
+  margin-top: 163px;
+  font-size: 90px;
+  margin-bottom: 40px;
+  font-weight: bolder;
+}
+
+h1 span:nth-child(1),
+h1 span:nth-child(4) {
+  color: rgb(66 133 244);
+}
+
+h1 span:nth-child(2),
+h1 span:nth-child(6) {
+  color: rgb(255 54 54);
+}
+
+h1 span:nth-child(3) {
+  color: rgb(237 210 0);
+}
+
+h1 span:nth-child(5) {
+  color: rgb(47 157 39);
+}
+
+.search-bar {
+  width: 550px;
+}
+
+input {
+  box-shadow: 1px 1px 5px rgb(184, 182, 182);
+}
+
+.rounded-pill {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+/*input으로 해줘야 그림자가 생기고, class를 다시 지정해주면 padding이 되는지 잘 모르겠다.*/
