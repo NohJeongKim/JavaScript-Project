@@ -1,0 +1,93 @@
+@import "reset.css";
+
+body {
+  margin: 0;
+  font-family: "Black Han Sans", sans-serif;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-family: "Smooch Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__menu li:hover {
+  background-color: #ecb5d5;
+  border-radius: 5px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e0489c;
+  padding: 8px 12px;
+}
+
+.nav__logo {
+  font-size: large;
+  color: #643dc8;
+}
+
+.nav__menu {
+  display: flex;
+  padding-left: 0;
+}
+
+.nav__menu li {
+  padding: 8px 12px;
+}
+
+.nav__icons {
+  color: white;
+  display: flex;
+  padding-left: 0;
+}
+
+.nav__icons li {
+  padding: 8px 12px;
+}
+
+/* 원래 문서의 흐름에서 나와서 오른쪽 위에 붙여야 한다. > position : absolute 사용하기. */
+
+.nav__toogleBtn {
+  position: absolute;
+  right: 25px;
+  font-size: 18px;
+  color: #643dc8;
+  display: none;
+}
+
+@media screen and (max-width: 520px) {
+  .navbar {
+    flex-direction: column;
+    /* 로고가 수평에서 왼쪽에 있기를 바란다. */
+    align-items: flex-start;
+    padding: 8px 12px;
+  }
+  .nav__menu {
+    flex-direction: column;
+    /* 메뉴나 아이콘은 중간 정렬하기를 원한다. */
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+  .nav__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav__icons {
+    justify-content: center;
+    width: 100%;
+    display: none;
+  }
+  .nav__toogleBtn {
+    display: block;
+  }
+  .nav__menu.active,
+  .nav__icons.active {
+    display: flex;
+  }
+}
