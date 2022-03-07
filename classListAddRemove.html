@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassListExamples</title>
+  </head>
+  <body>
+    <h3>classList Example Add & Remove</h3>
+    <span class="a b">classList is "a b".</span>
+    <script>
+      const text = document.querySelector("span");
+      // console.log(text);
+      // console.log(text.textContent); 텍스트의 내용을 가져온다.
+      const classes = text.classList;
+      // console.log(classes);
+
+      text.addEventListener("click", function (event) {
+        // console.log(event);
+        const isC = classes.toggle("c");
+        // console.log(isC);
+
+        if (isC) {
+          // true -> c를 add 시켜준다.
+          text.textContent = `"c" Added : classList is "${classes}".`;
+        } else {
+          // false -> c를 remove 시켜준다.
+          text.textContent = `"c" Removed : classList is "${classes}".`;
+        }
+      });
+    </script>
+  </body>
+</html>
