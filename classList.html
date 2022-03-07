@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassList Property</title>
+    <style>
+      #activation {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li id="active" class="marked">JAVASCRIPT</li>
+    </ul>
+    <button class="tokenList">DOMTokenList</button>
+    <button class="check">조회</button>
+    <button class="add">추가</button>
+    <button class="remove">제거</button>
+    <button class="toggle">토글</button><br />
+    <script>
+      const active = document.getElementById("active");
+      // console.log(active);
+      // console.log(active.classList); classList property에 저장되어 있는 객체는 DOMTokenList 이다.
+      /* for (i = 0; i < active.classList.length; i++) {
+        console.log(active.classList[i]); // 가지고 있는 객체들을 열거할 수 있다.
+      } */
+      /*
+      active.classList.add("important"); // 추가하기.
+      console.log(active.classList);
+      active.classList.remove("important"); // 제거하기.
+      console.log(active.classList);
+      */
+      // 넣었다가 제거하기를 반복하고 싶은 경우 -> toggle 이용하기.
+      // active.classList.toggle("important");
+    </script>
+  </body>
+</html>
