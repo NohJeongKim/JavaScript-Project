@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassListExamples</title>
+    <style>
+      .menu {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>classList Example 1</h3>
+    <button class="btn">메뉴</button>
+    <ul class="menu">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <script>
+      const button = document.querySelector(".btn");
+      // console.log(button);
+      const classes = button.classList;
+      // console.log(classes);
+
+      button.addEventListener("click", function (event) {
+        const menu = document.querySelector(".menu");
+        const isActive = menu.classList.toggle("active");
+        // console.log(menu);
+        // console.log(menu.classList.toggle("active"));
+        // console.log(isActive);
+        if (isActive) {
+          // true
+          menu.style.display = "block";
+        } else {
+          // false
+          menu.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

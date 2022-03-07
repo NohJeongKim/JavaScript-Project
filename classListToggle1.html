@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassListExamples</title>
+    <style>
+      .menu {
+        /* 기능이 꺼져 있는 경우에는 화면에 표시하지 않는다. 기능: class = active */
+        display: none;
+      }
+      .menu.active {
+        /* 기능이 켜져 있는 경우에는 화면에 표시해준다. 기능: class = active */
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>classList Example 1</h3>
+    <button class="btn">메뉴</button>
+    <ul class="menu">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <script>
+      const btn = document.querySelector(".btn");
+      // console.log(btn);
+
+      btn.addEventListener("click", function (event) {
+        // console.log(event);
+        const menu = document.querySelector(".menu");
+        // console.log(menu);
+        // btn.classList.toggle("active");
+        // console.log(btn.classList);
+        menu.classList.toggle("active");
+        // console.log(menu);
+      });
+    </script>
+  </body>
+</html>
